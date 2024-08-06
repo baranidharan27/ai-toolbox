@@ -81,13 +81,14 @@
 ## Datapreprocessing and quality assurance
 
 
-#### 1.2 Handling Missing data
+#### Handling Missing data
 
-df[column] = np.round(imputer.fit_transform(df[[column]]),1) ## Put np.round for consistency accross the whole data np.round rounds off to the decimal value specified
+- df[column] = np.round(imputer.fit_transform(df[[column]]),1) 
+Put np.round for consistency accross the whole data np.round rounds off to the decimal value specified
 
-#### 1.2 Data Quality metrics and validation
+#### Data Quality metrics and validation
 
-Original if pd.api.types.is_numeric_dtype(df[column]): elif pd.api.types.is_string_dtype(df[column]) Corrected if pd.api.types.is_numeric_dtype(column): elif pd.api.types.is_string_dtype(column):
+- Original if pd.api.types.is_numeric_dtype(df[column]): elif pd.api.types.is_string_dtype(df[column]) Corrected if pd.api.types.is_numeric_dtype(column): elif pd.api.types.is_string_dtype(column):
 
-Passing as a column of the pandas dataframe results in keyerror. Instead pass it as Pandas Series
+- Passing as a column of the pandas dataframe results in keyerror. Instead pass it as Pandas Series
 
